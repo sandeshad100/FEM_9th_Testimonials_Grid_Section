@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+:root{
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+body{
+   
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-family: 'Fraunces', serif;
+    font-family: 'Barlow', sans-serif;
+    background-color: var(--Light-grayish-blue);
+}
+.testimonials{
+     
+    padding: 20px;
+    display: static;
+    grid-auto-columns: 1fr;
+
+
+}
+.client{
+    /* border: 1px solid brown; */
+    padding: 40px;
+    justify-self: center;
+    border-radius: 20px;
+    cursor: pointer;
+   
+}
+
+
+.client .clientRole{
+    opacity: 0.5;
+}
+.client:not(:last-child) {
+    margin-bottom: 35px;
+}
+
+
+.clientInfo{
+    /* border: 1px solid green; */
+    width: 200px;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.imgWrap{
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.imgWrap img{
+    width: 100%;
+    object-fit: contain;
+    border-radius: inherit;
+}
+
+.clientReviewTitle{
+    font-size: 22px;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+.clientReviewDetails{
+    font-size: 18px;
+    line-height: 1.3;
+    opacity: 0.8;
+    color: var(--Very-dark-blackish-blue);
+}
+
+.clientInfoRight{
+    line-height: 1.5;
+}
+
+
+    #client-1{
+        grid-area: client-1;
+        background-color: var(--Moderate-violet);
+        background-image: url('images/bg-pattern-quotation.svg');
+        background-repeat: no-repeat;
+        background-position-x: 80%;
+        background-size: 150px;
+    }
+    #client-1 .clientReviewTitle,
+    #client-2 .clientReviewTitle,
+    #client-4 .clientReviewTitle
+    {
+        color: var(--White);
+    }
+    #client-1 .clientReviewDetails,
+    #client-2 .clientReviewDetails,
+    #client-4 .clientReviewDetails
+    {
+        color: var(--Light-gray);
+    }
+    #client-1 .clientRole,
+    #client-2 .clientRole,
+    #client-4 .clientRole
+    {
+        color: var(--Light-grayish-blue);
+       
+    }
+    #client-1 .clientName,
+    #client-2 .clientName,
+    #client-4 .clientName
+    {
+        color: var(--White);
+    }
+    .client .clientReviewDetails, .client .clientRole{
+        color: var(--Very-dark-grayish-blue);
+    }
+    #client-2{
+        grid-area: client-2;
+        background-color: var(--Very-dark-grayish-blue);
+    }
+    #client-3{
+        grid-area: client-3;
+        background-color: var(--White);
+    }
+    #client-4{
+        grid-area: client-4;
+        background-color: var(--Very-dark-blackish-blue);
+    }
+    #client-5{
+        grid-area: client-5;
+        background-color: var(--White);
+    }
+
+/* layout  */
+@media only screen and (min-width:600px){
+    .client:not(:last-child) {
+        margin-bottom: 0;
+    }
+    
+    .testimonials{
+     
+        /* background-color: rgb(110, 122, 47); */
+        padding: 20px;
+        display: grid;
+        
+        /* grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto;   */
+    
+        gap: 20px;
+        grid-template-areas: 
+        "client-1 client-2 "
+        "client-3 client-4 "
+        "client-5 client-5"
+    ;
+    
+    }
+}
+
+@media only screen and (min-width:992px){
+.testimonials{
+     
+    /* background-color: rgb(110, 122, 47); */
+    padding: 20px;
+    display: grid;
+    
+    /* grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;   */
+
+    gap: 20px;
+    grid-template-areas: 
+    "client-1 client-1 client-2 client-5 "
+    "client-3 client-4 client-4 client-5"
+;
+
+}
+}
+
+
+
+
+
+
