@@ -14,13 +14,20 @@
 }
 body{
    
+   
+    min-height: 100vh;
     font-family: 'Barlow Semi Condensed', sans-serif;
     font-family: 'Fraunces', serif;
     font-family: 'Barlow', sans-serif;
     background-color: var(--Light-grayish-blue);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 .testimonials{
-     
+    max-width: 1110px;
     padding: 20px;
     display: static;
     grid-auto-columns: 1fr;
